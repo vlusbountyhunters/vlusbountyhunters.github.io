@@ -1,160 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VLU — Bounty Hunter Guild</title>
-<style>
-  :root { color-scheme: dark; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    min-height: 100vh;
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #e8e6e3;
-    background: radial-gradient(ellipse at 50% 0%, #1a1a24 0%, #0b0b10 55%, #050508 100%) fixed;
-  }
-  .header {
-    width: 100%;
-    text-align: center;
-    background: #050508;
-    border-bottom: 1px solid #3a3a46;
-  }
-  .header img {
-    display: block;
-    width: 100%;
-    max-height: 360px;
-    object-fit: cover;
-  }
-  .wrap {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 40px 24px 56px;
-    text-align: center;
-  }
-  h1 {
-    font-size: 40px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    color: #f5f2ea;
-    margin-bottom: 8px;
-  }
-  .tagline {
-    font-size: 15px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #c9a34a;
-    margin-bottom: 36px;
-  }
-  .lead {
-    font-size: 17px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    line-height: 2;
-    color: #d8d5cd;
-    margin-bottom: 28px;
-  }
-  .body-text {
-    font-size: 15px;
-    line-height: 1.9;
-    color: #c6c3bd;
-    margin-bottom: 28px;
-  }
-  .only-contracts {
-    font-size: 16px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #c9a34a;
-    margin: 28px 0;
-  }
-  .panel {
-    border: 1px solid #3a3a46;
-    border-radius: 8px;
-    padding: 22px;
-    background: rgba(20, 20, 28, 0.6);
-    margin: 32px auto 0;
-    max-width: 420px;
-  }
-  .panel .hl {
-    font-size: 15px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #c9a34a;
-    margin-bottom: 8px;
-  }
-  .ip {
-    font-size: 19px;
-    letter-spacing: 1px;
-    color: #f5f2ea;
-  }
-  .legend {
-    margin-top: 40px;
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #5d5d68;
-    line-height: 2.2;
-  }
-  .legend .hl { color: #c9a34a; }
-  .footer {
-    padding: 20px;
-    text-align: center;
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: #6b6b76;
-    border-top: 1px solid #2a2a34;
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="VLU Bounty Hunters, a player community on the SWG Talon Core3 Pre-CU galaxy.">
+  <title>VLU Bounty Hunters | SWG Core3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-  <div class="header">
-    <img src="vluheader.png" alt="VLU — Bounty Hunter Guild">
-  </div>
-
-  <div class="wrap">
-    <h1>VLU</h1>
-    <div class="tagline">Bounty Hunter Guild</div>
-
-    <div class="lead">
-      Jedi. Sith. Criminal. Outlaw.<br>
-      We don't care which side of the galaxy you stand on.<br>
-      If there's a contract with your name on it, we're coming for you.
-    </div>
-
-    <div class="body-text">
-      VLU is a guild for players who live for the hunt. From the crowded streets of desert
-      spaceports to the most remote corners of the galaxy, our hunters track their targets,
-      collect their bounties and build their reputation one contract at a time.
-    </div>
-
-    <div class="body-text">
-      There are no light-side alliances here.<br>
-      There are no dark-side alliances here.
-    </div>
-
-    <div class="only-contracts">Only contracts.</div>
-
-    <div class="body-text">
-      Think you've got what it takes to become one of us?
-      Then gear up, choose your target and enter the hunt.
-    </div>
-
-    <div class="panel">
-      <div class="hl">SWG Core3 Pre-CU</div>
-      <div class="ip">51.222.204.198:44453</div>
-    </div>
-
-    <div class="legend">
-      ONLY THE BRAVE ENTER.<br>
-      LEGENDS ARE MADE BY THE HUNT.<br>
-      <span class="hl">VLU — Prepare to be hunted.</span>
+<body data-page="home">
+  <div class="disclaimer" id="disclaimer" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
+    <div class="disclaimer-panel">
+      <div class="scan-label">Incoming transmission</div>
+      <h1 id="disclaimer-title">Enter the hunt</h1>
+      <p>VLU is an unofficial player community for Star Wars Galaxies. It is not affiliated with Disney, Lucasfilm, Sony Online Entertainment, Electronic Arts, or Daybreak Game Company.</p>
+      <p>You must own a legal copy of Star Wars Galaxies. This service is free to play and carries no warranty.</p>
+      <label class="consent"><input type="checkbox" id="disclaimer-check"> <span>I understand and wish to continue.</span></label>
+      <button class="button primary" id="disclaimer-accept" disabled>Accept contract</button>
     </div>
   </div>
 
-  <div class="footer">
-    VLU is an unofficial fan-made server. Not affiliated with Disney, Lucasfilm,
-    Sony Online Entertainment, or Daybreak Game Company. You must own the original game.
-  </div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">VLU</span><span>Bounty Hunters</span></a>
+    <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="download.html">Download</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">SWG Core3 Pre-CU</p>
+        <h1>VLU Bounty Hunters</h1>
+        <p class="hero-lead">Jedi. Sith. Criminal. Outlaw. If there is a contract with your name on it, the hunt has already begun.</p>
+        <div class="actions">
+          <a class="button primary" href="register.html">Enter the galaxy</a>
+          <a class="button secondary" href="#bounty-net">Open bounty net</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="status-strip" aria-label="Live server status">
+      <div><span class="status-dot" id="status-dot"></span><strong id="server-state">Scanning</strong><small>Core3 galaxy</small></div>
+      <div><strong id="contract-count">--</strong><small>active contracts</small></div>
+      <div><strong id="contract-value">--</strong><small>credits posted</small></div>
+      <div><strong>51.222.204.198</strong><small>server address</small></div>
+    </section>
+
+    <section class="section intro-section">
+      <div class="section-heading">
+        <p class="eyebrow">The guild</p>
+        <h2>Only contracts</h2>
+        <p>VLU is a bounty-hunter community operating on the SWG Talon Core3 galaxy. Track targets, build your reputation, group with other hunters, and make every cantina conversation a little quieter.</p>
+      </div>
+      <div class="feature-grid">
+        <article><span>01</span><h3>Track the mark</h3><p>Follow live bounty signals, last-known planets, payouts, and recent claims.</p></article>
+        <article><span>02</span><h3>Build a name</h3><p>Hunt across a classic Pre-CU sandbox with professions, crafting, Jedi, PvP, and player cities.</p></article>
+        <article><span>03</span><h3>Join the network</h3><p>Create one Talon account, download the Core3 client, and enter the galaxy for free.</p></article>
+      </div>
+    </section>
+
+    <section class="section intel-section" id="bounty-net">
+      <div class="section-heading left">
+        <p class="eyebrow">Live Core3 intelligence</p>
+        <h2>Bounty network</h2>
+        <p>Signals are supplied by the live SWG Talon Core3 reporting feed and refresh automatically.</p>
+      </div>
+      <div class="intel-grid">
+        <div class="intel-panel">
+          <div class="panel-title"><h3>Latest activity</h3><span class="live-tag">Live feed</span></div>
+          <div class="feed-list" id="activity-list"><p class="empty">Acquiring Core3 signal...</p></div>
+        </div>
+        <div class="intel-panel">
+          <div class="panel-title"><h3>Hunter board</h3><span class="live-tag">Contracts</span></div>
+          <div class="feed-list" id="hunter-list"><p class="empty">Decrypting bounty records...</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div><p class="eyebrow">Ready to deploy?</p><h2>Your first contract is waiting.</h2></div>
+      <div class="actions"><a class="button primary" href="register.html">Register</a><a class="button secondary" href="download.html">Download Core3</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><strong>VLU Bounty Hunters</strong><span>Player community on SWG Talon Core3</span><span>Unofficial fan project. Original game ownership required.</span></footer>
+  <script src="app.js"></script>
 </body>
 </html>
