@@ -12,72 +12,149 @@
     font-family: "Segoe UI", Arial, sans-serif;
     color: #e8e6e3;
     background: radial-gradient(ellipse at 50% 0%, #1a1a24 0%, #0b0b10 55%, #050508 100%) fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
   }
-  .container { max-width: 640px; }
+  .header {
+    width: 100%;
+    text-align: center;
+    background: #050508;
+    border-bottom: 1px solid #3a3a46;
+  }
+  .header img {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 56px;
+    text-align: center;
+  }
   h1 {
-    font-size: 42px;
+    font-size: 40px;
     letter-spacing: 8px;
     text-transform: uppercase;
     color: #f5f2ea;
     margin-bottom: 8px;
   }
   .tagline {
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: #c9a34a;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
+  }
+  .lead {
+    font-size: 17px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 2;
+    color: #d8d5cd;
+    margin-bottom: 28px;
+  }
+  .body-text {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #c6c3bd;
+    margin-bottom: 28px;
+  }
+  .only-contracts {
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c9a34a;
+    margin: 28px 0;
   }
   .panel {
     border: 1px solid #3a3a46;
     border-radius: 8px;
-    padding: 24px;
+    padding: 22px;
     background: rgba(20, 20, 28, 0.6);
-    margin-bottom: 16px;
+    margin: 32px auto 0;
+    max-width: 420px;
   }
-  .panel p { line-height: 1.7; color: #c6c3bd; }
-  .panel .hl { color: #c9a34a; font-weight: 600; }
-  .coming {
-    font-size: 14px;
+  .panel .hl {
+    font-size: 15px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #8b8b96;
-    margin-bottom: 24px;
+    color: #c9a34a;
+    margin-bottom: 8px;
   }
-  .ip { font-size: 18px; letter-spacing: 1px; color: #f5f2ea; }
+  .ip {
+    font-size: 19px;
+    letter-spacing: 1px;
+    color: #f5f2ea;
+  }
   .legend {
-    margin-top: 32px;
+    margin-top: 40px;
     font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #5d5d68;
-    line-height: 2;
+    line-height: 2.2;
+  }
+  .legend .hl { color: #c9a34a; }
+  .footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #6b6b76;
+    border-top: 1px solid #2a2a34;
   }
 </style>
 </head>
 <body>
-  <div class="container">
+
+  <div class="header">
+    <img src="vluheader.png" alt="VLU — Bounty Hunter Guild">
+  </div>
+
+  <div class="wrap">
     <h1>VLU</h1>
     <div class="tagline">Bounty Hunter Guild</div>
-    <div class="coming">Site under construction — the hunt begins soon</div>
-    <div class="panel">
-      <p>Jedi. Sith. Criminal. Outlaw.</p>
-      <p>We don't care which side of the galaxy you stand on.</p>
-      <p>If there's a contract with your name on it, we're coming for you.</p>
+
+    <div class="lead">
+      Jedi. Sith. Criminal. Outlaw.<br>
+      We don't care which side of the galaxy you stand on.<br>
+      If there's a contract with your name on it, we're coming for you.
     </div>
-    <div class="panel">
-      <p class="hl">SWG Core3 Pre-CU</p>
-      <p class="ip">51.222.204.198:44453</p>
+
+    <div class="body-text">
+      VLU is a guild for players who live for the hunt. From the crowded streets of desert
+      spaceports to the most remote corners of the galaxy, our hunters track their targets,
+      collect their bounties and build their reputation one contract at a time.
     </div>
+
+    <div class="body-text">
+      There are no light-side alliances here.<br>
+      There are no dark-side alliances here.
+    </div>
+
+    <div class="only-contracts">Only contracts.</div>
+
+    <div class="body-text">
+      Think you've got what it takes to become one of us?
+      Then gear up, choose your target and enter the hunt.
+    </div>
+
+    <div class="panel">
+      <div class="hl">SWG Core3 Pre-CU</div>
+      <div class="ip">51.222.204.198:44453</div>
+    </div>
+
     <div class="legend">
       ONLY THE BRAVE ENTER.<br>
-      LEGENDS ARE MADE BY THE HUNT.
+      LEGENDS ARE MADE BY THE HUNT.<br>
+      <span class="hl">VLU — Prepare to be hunted.</span>
     </div>
   </div>
+
+  <div class="footer">
+    VLU is an unofficial fan-made server. Not affiliated with Disney, Lucasfilm,
+    Sony Online Entertainment, or Daybreak Game Company. You must own the original game.
+  </div>
+
 </body>
 </html>
