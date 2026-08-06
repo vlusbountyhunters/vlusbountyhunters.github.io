@@ -13,6 +13,7 @@
   const hunterList=document.getElementById('hunter-list');
   if(!activityList&&!hunterList) return;
   const feedUrl='https://register.swgtalon.online/activity.php';
+  const statusUrl='https://register.swgtalon.online/status.precu.php';
   const resetBaseline=new Set([
     'bounty_kill|Xix Lightning was claimed on Dantooine|Unknown hunter claimed 612,000 credits near Dantooine outpost signal',
     'bounty_kill|Kiingpool was claimed on Corellia|Overt claimed 612,000 credits near Corellia starport trace',
@@ -39,13 +40,25 @@
       const source=(heartbeat?.detail||'')+' '+(ad?.detail||'');const count=numberFrom(source,/(\d+)\s+(?:public\s+)?contracts?/i);const value=numberFrom(source,/([\d,]+)\s+credits/i);
       const countEl=document.getElementById('contract-count');const valueEl=document.getElementById('contract-value');
       if(countEl)countEl.textContent=String(count);if(valueEl)valueEl.textContent=credits(value);
-      const state=document.getElementById('server-state');const dot=document.getElementById('status-dot');
-      if(state)state.textContent='Online';if(dot)dot.className='status-dot online';
     }catch(error){
       if(activityList)activityList.innerHTML='<p class="empty">Core3 feed temporarily unavailable. Retrying shortly.</p>';
       if(hunterList)hunterList.innerHTML='<p class="empty">Bounty records unavailable.</p>';
-      const state=document.getElementById('server-state');const dot=document.getElementById('status-dot');if(state)state.textContent='Feed offline';if(dot)dot.className='status-dot offline';
     }
   }
-  refresh();setInterval(refresh,60000);
+  const duration=seconds=>{const total=Math.max(0,Number(seconds)||0);const days=Math.floor(total/86400);const hours=Math.floor((total%86400)/3600);return days?days+'d '+hours+'h':hours+'h '+Math.floor((total%3600)/60)+'m';};
+  async function refreshStatus(){
+    const indicator=document.getElementById('server-indicator');
+    try{
+      const response=await fetch(statusUrl+'?_='+Date.now(),{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);
+      const data=await response.json();const health=data.server_status||{};const playerData=data.players||{};const online=Number(playerData.online)||0;const isOnline=Boolean(health.overall_online);
+      document.getElementById('server-state').textContent=isOnline?'Online':'Offline';indicator.className='server-indicator '+(isOnline?'online':'offline');
+      document.getElementById('online-players').textContent=String(online);document.getElementById('population-fill').style.width=(isOnline?Math.max(3,Math.min(100,online*5)):3)+'%';
+      document.getElementById('login-state').textContent=health.login_online?'Online':'Offline';document.getElementById('database-state').textContent=data.database?.ok?'Linked':'Fault';document.getElementById('game-uptime').textContent=duration(data.uptime?.game_uptime_seconds);
+      const pilots=Array.isArray(playerData.online_now)?playerData.online_now:[];document.getElementById('active-pilots').textContent=pilots.length?pilots.map(p=>typeof p==='string'?p:(p.name||p.character||'Unknown')).join(' / '):'No transponder signals';
+      const updated=new Date(data.updated_at);document.getElementById('ops-updated').textContent='Uplink synchronized '+(Number.isNaN(updated.getTime())?'just now':updated.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}));
+    }catch(error){
+      document.getElementById('server-state').textContent='Unreachable';indicator.className='server-indicator offline';document.getElementById('ops-updated').textContent='Telemetry link interrupted - retrying';
+    }
+  }
+  refresh();refreshStatus();setInterval(refresh,60000);setInterval(refreshStatus,60000);
 })();

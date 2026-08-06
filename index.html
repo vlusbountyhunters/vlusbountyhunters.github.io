@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet" href="console.css">
 </head>
 <body data-page="home">
   <div class="disclaimer" id="disclaimer" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
@@ -45,11 +46,24 @@
       </div>
     </section>
 
-    <section class="status-strip" aria-label="Live server status">
-      <div><span class="status-dot" id="status-dot"></span><strong id="server-state">Scanning</strong><small>Core3 galaxy</small></div>
-      <div><strong id="contract-count">--</strong><small>active contracts</small></div>
-      <div><strong id="contract-value">--</strong><small>credits posted</small></div>
-      <div><strong>51.222.204.198</strong><small>server address</small></div>
+    <section class="ops-section" aria-label="Live Core3 galaxy operations">
+      <div class="ops-heading"><p class="eyebrow">Live galaxy telemetry</p><h2>Core3 Operations</h2><span id="ops-updated">Establishing secure uplink...</span></div>
+      <div class="ops-grid">
+        <article class="server-console">
+          <div class="console-orb" aria-hidden="true"><span></span><b>III</b></div>
+          <div class="console-body">
+            <div class="console-title"><div><strong>VLU Core3</strong><small>Pre-CU galaxy mainframe</small></div><span class="server-indicator" id="server-indicator"><i></i><b id="server-state">Scanning</b></span></div>
+            <div class="player-reading"><strong id="online-players">--</strong><span>players online</span></div>
+            <div class="population-track"><span id="population-fill"></span></div>
+            <div class="console-metrics"><span>Login <b id="login-state">Checking</b></span><span>Database <b id="database-state">Checking</b></span><span>Uptime <b id="game-uptime">--</b></span></div>
+          </div>
+        </article>
+        <article class="intel-console">
+          <div class="console-label"><span>Bounty telemetry</span><b>Live</b></div>
+          <div class="intel-readings"><div><strong id="contract-count">0</strong><span>active contracts</span></div><div><strong id="contract-value">0</strong><span>credits posted</span></div></div>
+          <div class="pilot-line"><span>Active pilots</span><strong id="active-pilots">Awaiting transponder signals</strong></div>
+        </article>
+      </div>
     </section>
 
     <section class="section intro-section">
