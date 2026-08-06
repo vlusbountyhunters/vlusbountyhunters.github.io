@@ -13,6 +13,16 @@
   const hunterList=document.getElementById('hunter-list');
   if(!activityList&&!hunterList) return;
   const feedUrl='https://register.swgtalon.online/activity.php';
+  const resetBaseline=new Set([
+    'bounty_kill|Xix Lightning was claimed on Dantooine|Unknown hunter claimed 612,000 credits near Dantooine outpost signal',
+    'bounty_kill|Kiingpool was claimed on Corellia|Overt claimed 612,000 credits near Corellia starport trace',
+    'hunter_stat|Overt active on the bounty net|1 kills, 612,000 credits earned, 1 active contracts',
+    'heartbeat|Bounty net synced|Live board refreshed with 2 contracts, 2 marked online, and 0 claims today.',
+    'csr|CSR support online|Need help in game? PM Xanatos, Equinox, or Mikato.',
+    'safety|Play safe|Staff will never ask for your personal details or passwords.',
+    'ad|Join the hunt|2 public contracts worth 1,224,000 credits are on the board.'
+  ]);
+  const signalKey=item=>[item.kind||'',item.title||'',item.detail||''].join('|');
   const esc=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const numberFrom=(text,pattern)=>{const match=String(text||'').match(pattern);return match?Number(match[1].replace(/,/g,'')):0;};
   const credits=n=>n>=1000000?(n/1000000).toFixed(n>=10000000?0:1)+'M':n>=1000?Math.round(n/1000)+'K':String(n||0);
@@ -20,7 +30,7 @@
   async function refresh(){
     try{
       const response=await fetch(feedUrl+'?_='+Date.now(),{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);
-      const data=await response.json();const all=(data.items||[]).filter(i=>i.era==='Core3');
+      const data=await response.json();const all=(data.items||[]).filter(i=>i.era==='Core3'&&!resetBaseline.has(signalKey(i)));
       const activity=all.filter(i=>['bounty_kill','heartbeat','csr','safety'].includes(i.kind)).slice(0,7);
       const hunters=all.filter(i=>['hunter_stat','ad','bounty_kill'].includes(i.kind)).slice(0,6);
       if(activityList)activityList.innerHTML=activity.length?activity.map(row).join(''):'<p class="empty">No new Core3 activity reported.</p>';
