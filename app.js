@@ -85,3 +85,62 @@
   }
   refresh();refreshStatus();setInterval(refresh,60000);setInterval(refreshStatus,60000);
 })();
+
+// -- Ambient console sound effects (hover / confirm) -----------------
+(function(){
+  let ctx=null,hoverBuf=null,clickBuf=null,loading=null;
+
+  function ensureContext(){
+    if(ctx) return ctx;
+    const AC=window.AudioContext||window.webkitAudioContext;
+    if(!AC) return null;
+    try{ ctx=new AC(); }catch(e){ ctx=null; }
+    return ctx;
+  }
+
+  async function loadBuffer(url){
+    const c=ensureContext();
+    if(!c) return null;
+    try{
+      const res=await fetch(url);
+      const arr=await res.arrayBuffer();
+      return await c.decodeAudioData(arr);
+    }catch(e){ return null; }
+  }
+
+  function ensureLoaded(){
+    if(loading) return loading;
+    loading=(async()=>{
+      const c=ensureContext();
+      if(!c) return;
+      if(c.state==='suspended'){ try{ await c.resume(); }catch(e){} }
+      hoverBuf=await loadBuffer('hover.wav');
+      clickBuf=await loadBuffer('click.wav');
+    })();
+    return loading;
+  }
+
+  function play(buf,gainValue){
+    if(!ctx||!buf) return;
+    const src=ctx.createBufferSource();
+    src.buffer=buf;
+    const gain=ctx.createGain();
+    gain.gain.value=gainValue;
+    src.connect(gain).connect(ctx.destination);
+    src.start(0);
+  }
+
+  ['pointerdown','keydown','touchstart'].forEach(evt=>{
+    window.addEventListener(evt,()=>ensureLoaded(),{once:true,passive:true});
+  });
+
+  document.addEventListener('mouseenter',function(e){
+    const t=e.target&&e.target.closest?e.target.closest('.site-nav a, .button'):null;
+    if(t){ ensureLoaded().then(()=>play(hoverBuf,0.3)); }
+  },true);
+
+  document.addEventListener('click',function(e){
+    const t=e.target&&e.target.closest?e.target.closest('.button.primary'):null;
+    if(t){ ensureLoaded().then(()=>play(clickBuf,0.35)); }
+  },true);
+})();
