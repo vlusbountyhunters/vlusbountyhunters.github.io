@@ -11,7 +11,9 @@
 
   const activityList=document.getElementById('activity-list');
   const hunterList=document.getElementById('hunter-list');
-  if(!activityList&&!hunterList) return;
+  const mostWantedList=document.getElementById('most-wanted-list');
+  const hallOfFameList=document.getElementById('hall-of-fame-list');
+  if(!activityList&&!hunterList&&!mostWantedList&&!hallOfFameList) return;
   const feedUrl='https://register.swgtalon.online/activity.php';
   const statusUrl='https://register.swgtalon.online/status.precu.php';
   const resetBaseline=new Set([
@@ -28,6 +30,16 @@
   const numberFrom=(text,pattern)=>{const match=String(text||'').match(pattern);return match?Number(match[1].replace(/,/g,'')):0;};
   const credits=n=>n>=1000000?(n/1000000).toFixed(n>=10000000?0:1)+'M':n>=1000?Math.round(n/1000)+'K':String(n||0);
   function row(item){return '<div class="feed-item"><strong>'+esc(item.title)+'</strong><span>'+esc(item.detail||'Core3 signal received')+'</span></div>';}
+  function wantedCard(item){
+    return '<article class="wanted-card"><span class="wanted-tag"><i class="fa-solid fa-scroll"></i> Claimed</span><h3>'+esc(item.title)+'</h3><p>'+esc(item.detail||'Contract closed.')+'</p></article>';
+  }
+  function fameRow(item,rank){
+    const name=esc((item.title||'Unknown hunter').replace(/\s+active on the bounty net$/i,''));
+    const kills=numberFrom(item.detail,/(\d+)\s+kills?/i);
+    const creditsVal=numberFrom(item.detail,/([\d,]+)\s+credits/i);
+    const contracts=numberFrom(item.detail,/(\d+)\s+active contracts?/i);
+    return '<div class="fame-row rank-'+rank+'"><div class="fame-rank">#'+rank+'</div><div class="fame-name">'+name+'<small>Active bounty hunter</small></div><div class="fame-stats"><div><strong>'+kills+'</strong><span>Kills</span></div><div><strong>'+credits(creditsVal)+'</strong><span>Credits</span></div><div><strong>'+contracts+'</strong><span>Contracts</span></div></div></div>';
+  }
   async function refresh(){
     try{
       const response=await fetch(feedUrl+'?_='+Date.now(),{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);
@@ -36,6 +48,14 @@
       const hunters=all.filter(i=>['hunter_stat','ad','bounty_kill'].includes(i.kind)).slice(0,6);
       if(activityList)activityList.innerHTML=activity.length?activity.map(row).join(''):'<p class="empty">No new Core3 activity reported.</p>';
       if(hunterList)hunterList.innerHTML=hunters.length?hunters.map(row).join(''):'<p class="empty">No public contracts reported.</p>';
+      if(mostWantedList){
+        const wanted=all.filter(i=>i.kind==='bounty_kill').slice(0,9);
+        mostWantedList.innerHTML=wanted.length?wanted.map(wantedCard).join(''):'<div class="wanted-empty"><i class="fa-solid fa-satellite-dish"></i>No claims recorded yet on the current board. Check back soon.</div>';
+      }
+      if(hallOfFameList){
+        const rankedHunters=all.filter(i=>i.kind==='hunter_stat').sort((a,b)=>numberFrom(b.detail,/([\d,]+)\s+credits/i)-numberFrom(a.detail,/([\d,]+)\s+credits/i)).slice(0,10);
+        hallOfFameList.innerHTML=rankedHunters.length?rankedHunters.map((item,idx)=>fameRow(item,idx+1)).join(''):'<div class="fame-empty"><i class="fa-solid fa-ranking-star"></i>No ranked hunters yet on the current board. Check back soon.</div>';
+      }
       const heartbeat=all.find(i=>i.kind==='heartbeat');const ad=all.find(i=>i.kind==='ad');
       const source=(heartbeat?.detail||'')+' '+(ad?.detail||'');const count=numberFrom(source,/(\d+)\s+(?:public\s+)?contracts?/i);const value=numberFrom(source,/([\d,]+)\s+credits/i);
       const countEl=document.getElementById('contract-count');const valueEl=document.getElementById('contract-value');
@@ -43,11 +63,14 @@
     }catch(error){
       if(activityList)activityList.innerHTML='<p class="empty">Core3 feed temporarily unavailable. Retrying shortly.</p>';
       if(hunterList)hunterList.innerHTML='<p class="empty">Bounty records unavailable.</p>';
+      if(mostWantedList)mostWantedList.innerHTML='<div class="wanted-empty"><i class="fa-solid fa-satellite-dish"></i>Core3 feed temporarily unavailable. Retrying shortly.</div>';
+      if(hallOfFameList)hallOfFameList.innerHTML='<div class="fame-empty"><i class="fa-solid fa-ranking-star"></i>Hunter records unavailable. Retrying shortly.</div>';
     }
   }
   const duration=seconds=>{const total=Math.max(0,Number(seconds)||0);const days=Math.floor(total/86400);const hours=Math.floor((total%86400)/3600);return days?days+'d '+hours+'h':hours+'h '+Math.floor((total%3600)/60)+'m';};
   async function refreshStatus(){
     const indicator=document.getElementById('server-indicator');
+    if(!indicator) return;
     try{
       const response=await fetch(statusUrl+'?_='+Date.now(),{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);
       const data=await response.json();const health=data.server_status||{};const playerData=data.players||{};const online=Number(playerData.online)||0;const isOnline=Boolean(health.overall_online);
