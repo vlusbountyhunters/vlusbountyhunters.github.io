@@ -1,0 +1,15 @@
+.codex-lore { max-width: 900px; margin: 0 auto; }
+.codex-lore p { margin: 0 0 16px; font-size: 17px; line-height: 1.65; }
+.codex-lore p:last-child { margin-bottom: 0; }
+
+.codex-ranks { display: grid; gap: 1px; max-width: 900px; margin: 0 auto; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.rank-row { display: grid; grid-template-columns: 74px 1fr; gap: 20px; align-items: center; padding: 20px 24px; background: var(--panel); }
+.rank-row.featured { background: linear-gradient(90deg, rgba(212,170,77,.08), var(--panel)); }
+.rank-tier { display: grid; place-items: center; width: 52px; height: 52px; border: 1px solid var(--line); border-radius: 50%; color: var(--gold); font: 800 18px var(--head); }
+.rank-row.featured .rank-tier { border-color: var(--gold2); color: var(--gold2); box-shadow: 0 0 16px rgba(241,208,125,.3); }
+.rank-body h3 { margin: 0 0 4px; font-size: 19px; }
+.rank-body p { margin: 0; color: var(--muted); font-size: 15px; }
+
+@media (max-width: 620px) {
+  .rank-row { grid-template-columns: 52px 1fr; gap: 14px; padding: 16px; }
+}
