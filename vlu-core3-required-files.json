@@ -9,8 +9,14 @@
     {
       "path": "swgemu_live.cfg",
       "url": "https://swgreturns.com/patches/core3/get.php?f=swgemu_live.cfg",
-      "sha256": "0aad114882230085e91a8c91e9bc95a80cc549150a4e1fae2eaa4b716a70988e",
-      "size": 2473
+      "sha256": "9863f32ae891473fc1c22a3597fc871b05e8feb0a75cb5f347eb4fb70802835d",
+      "size": 2522
+    },
+    {
+      "path": "talon_patch_nge_rewards_01.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_nge_rewards_01.tre",
+      "sha256": "73365c7b51b7294f138967791ed095be2ff65771dccf4fbe4c18361844dced16",
+      "size": 94288
     },
     {
       "path": "talon_patch_vlu_rifle.tre",
