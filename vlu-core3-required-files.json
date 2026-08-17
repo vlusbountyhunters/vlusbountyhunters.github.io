@@ -1,3 +1,52 @@
 {
-  "files": []
+  "files": [
+    {
+      "path": "talon_patch_05.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_05.tre",
+      "sha256": "952bd2b9eb9aa1247fd436417f7764e979039a95b74d94b656ecaa1a27e0204a",
+      "size": 4367
+    },
+    {
+      "path": "swgemu_live.cfg",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=swgemu_live.cfg",
+      "sha256": "0aad114882230085e91a8c91e9bc95a80cc549150a4e1fae2eaa4b716a70988e",
+      "size": 2473
+    },
+    {
+      "path": "talon_patch_vlu_rifle.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_vlu_rifle.tre",
+      "sha256": "f806446f00e582df78effa7db51ba69813144782b94513f4f148007c3737e6df",
+      "size": 8641
+    },
+    {
+      "path": "talon_patch_07.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_07.tre",
+      "sha256": "011bc055c44abb16c3d147bb6241f3725a22335321f589ee1af944323a5bc0ab",
+      "size": 805
+    },
+    {
+      "path": "talon_patch_mandalore_terrain.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_mandalore_terrain.tre",
+      "sha256": "d3610454392efa093c4d33f6f47288edf0c33dc0915883f162eb63a510f23cb7",
+      "size": 333522
+    },
+    {
+      "path": "talon_patch_new_planets_terrain.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_new_planets_terrain.tre",
+      "sha256": "9180533eb56b881d03b795bcdbea9c43102b09a9c1418afae97200228e581e47",
+      "size": 5543325
+    },
+    {
+      "path": "talon_patch_travel_fares.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_travel_fares.tre",
+      "sha256": "054d1afc45dec16570f2830200b93ec0c4769aee94c18f07b82534088276fef4",
+      "size": 942
+    },
+    {
+      "path": "talon_patch_planets_01.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_planets_01.tre",
+      "sha256": "f4162d4ddec4c11e083ec637c020b2031c11fd4a2d57d3b3e3c658bdd0a98f80",
+      "size": 2374308
+    }
+  ]
 }
