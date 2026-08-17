@@ -39,8 +39,8 @@
     {
       "path": "talon_patch_travel_fares.tre",
       "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_travel_fares.tre",
-      "sha256": "054d1afc45dec16570f2830200b93ec0c4769aee94c18f07b82534088276fef4",
-      "size": 942
+      "sha256": "0cf6f7c5c213e391193c696646629514e4e0fa25caca4c3eeacc58718a810efc",
+      "size": 1674
     },
     {
       "path": "talon_patch_planets_01.tre",
