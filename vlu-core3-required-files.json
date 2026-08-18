@@ -9,14 +9,8 @@
     {
       "path": "swgemu_live.cfg",
       "url": "https://swgreturns.com/patches/core3/get.php?f=swgemu_live.cfg",
-      "sha256": "47cddf867b9efe89512604e59f3a879cb09e58f4c899e861f06844de4f15b91b",
-      "size": 2567
-    },
-    {
-      "path": "talon_patch_high_colonel_01.tre",
-      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_high_colonel_01.tre",
-      "sha256": "3ed155869fcb21933b20f23b2025997a6d14a3ad97f56414b06eb358c5f3646c",
-      "size": 6466
+      "sha256": "828cd7e093326cfc5a412510c23c7618cceb33f5e4ac2c0d1dc5ddc9c7385de1",
+      "size": 2517
     },
     {
       "path": "talon_patch_bothan_01.tre",
