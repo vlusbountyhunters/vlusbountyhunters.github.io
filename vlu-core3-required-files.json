@@ -9,8 +9,14 @@
     {
       "path": "swgemu_live.cfg",
       "url": "https://swgreturns.com/patches/core3/get.php?f=swgemu_live.cfg",
-      "sha256": "7c9009ab04847ad8c8c43dfe6bba928088c82372397b22fcc372dd202230e033",
-      "size": 2559
+      "sha256": "4c4c10607f1be85ccee0034264e944c0aa2205f7703ee6175f9d9ad140b41225",
+      "size": 2615
+    },
+    {
+      "path": "talon_patch_remaining_carbines_01.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_remaining_carbines_01.tre",
+      "sha256": "d900c20aaab11529606c68a0ea323acf175254b78c517400f721c3166a89d684",
+      "size": 3952
     },
     {
       "path": "talon_patch_dc15_01.tre",
