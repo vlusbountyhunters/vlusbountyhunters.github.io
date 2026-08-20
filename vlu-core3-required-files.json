@@ -9,8 +9,8 @@
     {
       "path": "swgemu_live.cfg",
       "url": "https://swgreturns.com/patches/core3/get.php?f=swgemu_live.cfg",
-      "sha256": "9aafc89119f5f540cc4bbd4ff6976d296f861cfc3ba96b82076845c9d910924a",
-      "size": 2605
+      "sha256": "7c9009ab04847ad8c8c43dfe6bba928088c82372397b22fcc372dd202230e033",
+      "size": 2559
     },
     {
       "path": "talon_patch_dc15_01.tre",
@@ -59,12 +59,6 @@
       "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_planets_01.tre",
       "sha256": "f4162d4ddec4c11e083ec637c020b2031c11fd4a2d57d3b3e3c658bdd0a98f80",
       "size": 2374308
-    },
-    {
-      "path": "talon_patch_setspeed_01.tre",
-      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_setspeed_01.tre",
-      "sha256": "64d9a189dd1a3cc20d1aefb0ab8a4a5c053d5d93255950b952a829b7bb3113d9",
-      "size": 16057
     }
   ]
 }
