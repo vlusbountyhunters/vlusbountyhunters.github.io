@@ -9,8 +9,8 @@
     {
       "path": "swgemu_live.cfg",
       "url": "https://swgreturns.com/patches/core3/get.php?f=swgemu_live.cfg",
-      "sha256": "4c4c10607f1be85ccee0034264e944c0aa2205f7703ee6175f9d9ad140b41225",
-      "size": 2615
+      "sha256": "6a5be18cb7badaef34b215e82377c303fef45e8c6db20b9875dfbac9c3585f04",
+      "size": 2707
     },
     {
       "path": "talon_patch_remaining_carbines_01.tre",
@@ -65,6 +65,18 @@
       "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_planets_01.tre",
       "sha256": "f4162d4ddec4c11e083ec637c020b2031c11fd4a2d57d3b3e3c658bdd0a98f80",
       "size": 2374308
+    },
+    {
+      "path": "talon_patch_nge_guns_all_01.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_nge_guns_all_01.tre",
+      "sha256": "19aa4be76e8a433adf0827994ca1fb2a65caf12a7b922f856620a0ef3095710f",
+      "size": 32640
+    },
+    {
+      "path": "talon_patch_stap_01.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_stap_01.tre",
+      "sha256": "877869b205793ddf1b4b3eca5c5eadc94ff814739bcdddc41f0da3decb2f0b0e",
+      "size": 2697228
     }
   ]
 }
