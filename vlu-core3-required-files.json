@@ -9,8 +9,20 @@
     {
       "path": "swgemu_live.cfg",
       "url": "https://swgreturns.com/patches/core3/get.php?f=swgemu_live.cfg",
-      "sha256": "6a5be18cb7badaef34b215e82377c303fef45e8c6db20b9875dfbac9c3585f04",
-      "size": 2707
+      "sha256": "194b3ede848f7c8bfbc25689e811f63b93bde8a7c7a546baa63954e74fa3650e",
+      "size": 2761
+    },
+    {
+      "path": "swgemu_login.cfg",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=swgemu_login.cfg",
+      "sha256": "67712485a3e740f87c48060f2b604988e2eb13b75bcb22112d56a7406b083739",
+      "size": 85
+    },
+    {
+      "path": "swgemu.cfg",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=swgemu.cfg",
+      "sha256": "af6dfdfdf1df46f0172341e589abd90e62e945fc0ab64e60eede73b9e6d52206",
+      "size": 199
     },
     {
       "path": "talon_patch_remaining_carbines_01.tre",
@@ -77,6 +89,12 @@
       "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_stap_01.tre",
       "sha256": "37c4a76f4da847db55a48869c1d02785358b981e17e1dcba85e7ecae77be2495",
       "size": 2701651
+    },
+    {
+      "path": "talon_patch_charric_tc22_fix_01.tre",
+      "url": "https://swgreturns.com/patches/core3/get.php?f=talon_patch_charric_tc22_fix_01.tre",
+      "sha256": "3616ab24967505d1d854006cf91a5ca4cdf8ddb748223f1a3deb32455d438b7e",
+      "size": 1093058
     }
   ]
 }
