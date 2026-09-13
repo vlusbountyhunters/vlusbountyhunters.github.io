@@ -25,10 +25,12 @@
   <link rel="stylesheet" href="hero.css">
   <link rel="stylesheet" href="console.css">
   <link rel="stylesheet" href="discord.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="icon" href="favicon-32.png" sizes="32x32">
   <link rel="icon" href="favicon-192.png" sizes="192x192">
   <link rel="apple-touch-icon" href="favicon-180.png">
   <link rel="shortcut icon" href="favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
 </head>
 <body data-page="home">
   <div class="disclaimer" id="disclaimer" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
@@ -82,6 +84,15 @@
           <div class="intel-readings"><div><strong id="contract-count">0</strong><span>active contracts</span></div><div><strong id="contract-value">0</strong><span>credits posted</span></div></div>
           <div class="pilot-line"><span>Active pilots</span><strong id="active-pilots">Awaiting transponder signals</strong></div>
         </article>
+      </div>
+    </section>
+
+    <section class="cam-section" aria-label="Cantina Cam">
+      <div class="cam-heading"><p class="eyebrow">Live Core3 feed</p><h2>Cantina Cam</h2><span class="cam-live-tag" id="cam-live-tag"><i></i><b id="cam-status-text">Connecting</b></span></div>
+      <div class="cam-box" id="cam-box">
+        <video id="cam-video" muted playsinline autoplay controls></video>
+        <div class="cam-offline" id="cam-offline"><div class="cam-offline-inner"><i class="fa-solid fa-satellite-dish"></i><p>Cantina feed will return shortly</p></div></div>
+        <div class="cam-label">SWG Core3 Cantina Cam &middot; Dareth, Tatooine</div>
       </div>
     </section>
 

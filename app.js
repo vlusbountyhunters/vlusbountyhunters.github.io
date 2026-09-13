@@ -86,7 +86,42 @@
   refresh();refreshStatus();setInterval(refresh,60000);setInterval(refreshStatus,60000);
 })();
 
-// -- Ambient console sound effects (hover / confirm) -----------------
+// -- Cantina Cam (live game feed) ---------------------------
+(function(){
+  const STREAM_URL='https://harvester.swgtalon.online/cantina/index.m3u8';
+  const video=document.getElementById('cam-video');
+  const offline=document.getElementById('cam-offline');
+  const tag=document.getElementById('cam-live-tag');
+  const statusText=document.getElementById('cam-status-text');
+  if(!video||!tag) return;
+  let lastTime=-1,stallTicks=0;
+
+  function setLive(live){
+    if(live){ tag.classList.add('online'); statusText.textContent='Live'; if(offline)offline.classList.remove('show'); }
+    else{ tag.classList.remove('online'); statusText.textContent=offline?'Offline':'Connecting'; if(offline)offline.classList.add('show'); }
+  }
+
+  function attach(){
+    if(window.Hls&&Hls.isSupported()){
+      const hls=new Hls({liveSyncDuration:3});
+      hls.loadSource(STREAM_URL);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.ERROR,(evt,data)=>{ if(data.fatal) setLive(false); });
+    }else if(video.canPlayType('application/vnd.apple.mpegurl')){
+      video.src=STREAM_URL;
+    }
+    video.play().catch(function(){});
+  }
+
+  setInterval(function(){
+    const t=video.currentTime;
+    if(t>0&&t>lastTime){ setLive(true); stallTicks=0; }
+    else{ stallTicks++; if(stallTicks>=6) setLive(false); }
+    lastTime=t;
+  },2000);
+
+  attach();
+})();
 (function(){
   let ctx=null,hoverBuf=null,clickBuf=null,loading=null;
 
