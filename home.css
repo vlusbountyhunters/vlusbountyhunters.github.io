@@ -1,0 +1,172 @@
+/* VLU Bounty Hunters — home page design system */
+
+/* ---- Live command deck (cam + telemetry) ----------------- */
+.deck {
+  padding: 70px max(24px, calc((100vw - 1180px) / 2));
+  background:
+    radial-gradient(1100px 360px at 50% -8%, rgba(212, 170, 77, .07), transparent 70%),
+    linear-gradient(0deg, #07080a, #050607);
+  border-bottom: 1px solid var(--line);
+}
+.deck-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0 0 24px;
+}
+.deck-head h2 { margin: 0; font-size: clamp(26px, 4vw, 40px); text-transform: uppercase; }
+.deck-head > span { color: var(--muted); font: 600 13px var(--head); text-transform: uppercase; letter-spacing: .08em; }
+
+.deck-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 18px; }
+
+.cam-panel,
+.console-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  box-shadow: 0 22px 50px #0008;
+}
+.cam-panel::before,
+.console-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent 60%);
+}
+.panel-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel2);
+}
+.panel-bar .pt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--muted);
+  font: 700 12px var(--head);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.live-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #777;
+  font: 800 12px var(--head);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+.live-dot i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+.live-dot.online { color: var(--green); }
+.live-dot.offline { color: var(--red); }
+
+.cam-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
+.cam-frame video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+.cam-offline { display: none; position: absolute; inset: 0; z-index: 2; place-items: center; padding: 20px; text-align: center; background: rgba(5, 6, 7, .88); }
+.cam-offline.show { display: grid; }
+.cam-offline i { display: block; margin-bottom: 12px; font-size: 34px; color: var(--gold); }
+.cam-offline p { margin: 0; color: var(--muted); }
+
+.console-panel { display: flex; flex-direction: column; gap: 18px; padding: 20px; }
+.console-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.console-top strong { display: block; font: 800 20px var(--head); text-transform: uppercase; }
+.console-top small { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
+.server-indicator { display: inline-flex; align-items: center; gap: 8px; color: #91a0aa; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
+.server-indicator i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 10px currentColor; }
+.server-indicator.online { color: var(--green); }
+.server-indicator.offline { color: var(--red); }
+
+.player-reading { display: flex; align-items: baseline; gap: 10px; }
+.player-reading strong { color: var(--gold2); font: 800 46px var(--head); line-height: 1; text-shadow: 0 0 20px rgba(212, 170, 77, .3); }
+.player-reading span { color: var(--muted); font-size: 14px; text-transform: uppercase; letter-spacing: .1em; }
+.population-track { height: 8px; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: #050607; }
+.population-track span { display: block; width: 3%; min-width: 3%; height: 100%; background: linear-gradient(90deg, #c3973d, var(--gold2)); box-shadow: 0 0 12px rgba(212, 170, 77, .5); transition: width .5s ease; }
+.console-metrics { display: flex; gap: 20px; flex-wrap: wrap; color: #7a7c77; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.console-metrics b { margin-left: 5px; color: var(--text); }
+
+.divider { border: 0; border-top: 1px solid var(--line); margin: 2px 0; }
+.bounty-line { display: flex; justify-content: space-between; gap: 12px; }
+.bounty-line > div { flex: 1; }
+.bounty-line strong, .bounty-line span { display: block; }
+.bounty-line strong { color: var(--gold); font: 800 26px var(--head); }
+.bounty-line span { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+.pilot-line { padding-top: 4px; }
+.pilot-line span { display: block; margin-bottom: 5px; color: #7a7c77; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+.pilot-line strong { color: #d8d6ce; font-size: 14px; font-weight: 600; }
+
+/* ---- Bounty network / intel panels ----------------------- */
+#bounty-net { background: #07080a; }
+.intel-panel { border-radius: 10px; }
+.panel-title { border-bottom-color: var(--line); }
+.feed-item strong { font-weight: 700; }
+
+/* ---- Update band ---------------------------------------- */
+.update-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  flex-wrap: wrap;
+  padding: 64px max(24px, calc((100vw - 1180px) / 2));
+  border-bottom: 1px solid var(--line);
+  background: #0a0b0d;
+}
+.update-band h2 { margin: 0 0 8px; font-size: clamp(24px, 3.5vw, 38px); text-transform: uppercase; }
+.update-band p:last-of-type { max-width: 660px; margin: 0; color: var(--muted); }
+.update-band .button { margin: 0; }
+
+/* ---- Discord --------------------------------------------- */
+.discord-section { padding: 0 max(24px, calc((100vw - 1180px) / 2)); background: #050607; }
+.discord-card {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 34px;
+  align-items: center;
+  margin: 70px 0;
+  padding: 38px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background:
+    radial-gradient(620px 240px at 8% 10%, rgba(88, 101, 242, .1), transparent 65%),
+    linear-gradient(140deg, #0d0f13, #090b0d);
+  box-shadow: 0 24px 60px #000a;
+}
+.discord-copy > p:not(.eyebrow) { max-width: 560px; color: var(--muted); }
+.discord-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
+.discord-widget { width: min(100%, 350px); height: 440px; margin: 0; overflow: hidden; border: 1px solid #343946; border-radius: 12px; background: #1e1f22; box-shadow: 0 18px 38px #0007; }
+.discord-widget iframe { display: block; width: 100%; max-width: 350px; height: 440px; border: 0; }
+.discord-button { color: #fff; border-color: #6976d9; background: #5865f2; }
+.discord-button i { margin-right: 8px; }
+
+/* ---- Responsive ------------------------------------------ */
+@media (max-width: 900px) {
+  .deck-grid { grid-template-columns: 1fr; }
+  .discord-card { grid-template-columns: 1fr; }
+  .discord-copy { text-align: center; }
+  .discord-actions { justify-content: center; }
+  .discord-widget { margin-inline: auto; }
+}
+@media (max-width: 800px) {
+  .deck { padding-top: 48px; padding-bottom: 48px; }
+  .deck-head { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+@media (max-width: 520px) {
+  .console-metrics { gap: 12px; row-gap: 8px; }
+  .bounty-line { flex-wrap: wrap; }
+}

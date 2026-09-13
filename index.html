@@ -23,8 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="hero.css">
-  <link rel="stylesheet" href="console.css">
-  <link rel="stylesheet" href="discord.css">
+  <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="icon" href="favicon-32.png" sizes="32x32">
   <link rel="icon" href="favicon-192.png" sizes="192x192">
@@ -67,50 +66,37 @@
       </div>
     </section>
 
-    <section class="ops-section" aria-label="Live Core3 galaxy operations">
-      <div class="ops-heading"><p class="eyebrow">Live galaxy telemetry</p><h2>Core3 Operations</h2><span id="ops-updated">Establishing secure uplink...</span></div>
-      <div class="ops-grid">
-        <article class="server-console">
-          <div class="console-orb" aria-hidden="true"><span></span><b>III</b></div>
-          <div class="console-body">
-            <div class="console-title"><div><strong>VLU Core3</strong><small>Pre-CU galaxy mainframe</small></div><span class="server-indicator" id="server-indicator"><i></i><b id="server-state">Scanning</b></span></div>
-            <div class="player-reading"><strong id="online-players">--</strong><span>players online</span></div>
-            <div class="population-track"><span id="population-fill"></span></div>
-            <div class="console-metrics"><span>Login <b id="login-state">Checking</b></span><span>Database <b id="database-state">Checking</b></span><span>Uptime <b id="game-uptime">--</b></span></div>
+    <section class="deck" aria-label="Live Core3 galaxy deck">
+      <div class="deck-head">
+        <div><p class="eyebrow">Live Core3 feed</p><h2>Galaxy deck</h2></div>
+        <span id="ops-updated">Establishing secure uplink...</span>
+      </div>
+      <div class="deck-grid">
+        <article class="cam-panel">
+          <div class="panel-bar">
+            <span class="pt"><i class="fa-solid fa-video" aria-hidden="true"></i> Cantina Cam &middot; Dareth, Tatooine</span>
+            <span class="live-dot" id="cam-live-tag"><i></i><b id="cam-status-text">Connecting</b></span>
+          </div>
+          <div class="cam-frame">
+            <video id="cam-video" muted playsinline autoplay controls></video>
+            <div class="cam-offline" id="cam-offline"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i><p>Cantina feed will return shortly</p></div>
           </div>
         </article>
-        <article class="intel-console">
-          <div class="console-label"><span>Bounty telemetry</span><b>Live</b></div>
-          <div class="intel-readings"><div><strong id="contract-count">0</strong><span>active contracts</span></div><div><strong id="contract-value">0</strong><span>credits posted</span></div></div>
+        <article class="console-panel">
+          <div class="console-top">
+            <div><strong>VLU Core3</strong><small>Pre-CU galaxy mainframe</small></div>
+            <span class="server-indicator" id="server-indicator"><i></i><b id="server-state">Scanning</b></span>
+          </div>
+          <div class="player-reading"><strong id="online-players">--</strong><span>players online</span></div>
+          <div class="population-track"><span id="population-fill"></span></div>
+          <hr class="divider">
+          <div class="bounty-line">
+            <div><strong id="contract-count">0</strong><span>active contracts</span></div>
+            <div><strong id="contract-value">0</strong><span>credits posted</span></div>
+          </div>
           <div class="pilot-line"><span>Active pilots</span><strong id="active-pilots">Awaiting transponder signals</strong></div>
+          <div class="console-metrics"><span>Login <b id="login-state">Checking</b></span><span>Database <b id="database-state">Checking</b></span><span>Uptime <b id="game-uptime">--</b></span></div>
         </article>
-      </div>
-    </section>
-
-    <section class="cam-section" aria-label="Cantina Cam">
-      <div class="cam-heading"><p class="eyebrow">Live Core3 feed</p><h2>Cantina Cam</h2><span class="cam-live-tag" id="cam-live-tag"><i></i><b id="cam-status-text">Connecting</b></span></div>
-      <div class="cam-box" id="cam-box">
-        <video id="cam-video" muted playsinline autoplay controls></video>
-        <div class="cam-offline" id="cam-offline"><div class="cam-offline-inner"><i class="fa-solid fa-satellite-dish"></i><p>Cantina feed will return shortly</p></div></div>
-        <div class="cam-label">SWG Core3 Cantina Cam &middot; Dareth, Tatooine</div>
-      </div>
-    </section>
-
-    <section class="discord-section" aria-labelledby="discord-title">
-      <div class="discord-art"><img src="vlu-discord-icon.png" alt="VLU bounty hunter emblem"></div>
-      <div class="discord-copy"><p class="eyebrow">Guild communications</p><h2 id="discord-title">Join VLU on Discord</h2><p>Meet the hunters, follow server announcements, report issues, share contracts, and find a group before entering the galaxy.</p><div class="discord-widget"><iframe src="https://discord.com/widget?id=1534796799523553330&amp;theme=dark" title="VLU Bounty Hunters Discord members" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div><a class="button discord-button" href="https://discord.gg/JknSN97MFR" target="_blank" rel="noopener">Join VLU Bounty Hunters</a></div>
-    </section>
-
-    <section class="section intro-section">
-      <div class="section-heading">
-        <p class="eyebrow">The guild</p>
-        <h2>Only contracts</h2>
-        <p>VLU is a bounty-hunter community operating on the VLU Core3 galaxy. Track targets, build your reputation, group with other hunters, and make every cantina conversation a little quieter.</p>
-      </div>
-      <div class="feature-grid">
-        <article><span>01</span><h3>Track the mark</h3><p>Follow live bounty signals, last-known planets, payouts, and recent claims.</p></article>
-        <article><span>02</span><h3>Build a name</h3><p>Hunt across a classic Pre-CU sandbox with professions, crafting, Jedi, PvP, and player cities.</p></article>
-        <article><span>03</span><h3>Join the network</h3><p>Create your VLU account, download the Core3 client, and enter the galaxy for free.</p></article>
       </div>
     </section>
 
@@ -132,8 +118,38 @@
       </div>
     </section>
 
-    <section class="section intel-section">
-      <div class="section-heading left"><p class="eyebrow">14 August 2026</p><h2>Latest galaxy update</h2><p>Advanced components, tribal medical supplies, backpacks, lightsabers, and player-city progression have all received major improvements.</p><a class="button secondary" href="updates.html">Read the update</a></div>
+    <section class="section intro-section">
+      <div class="section-heading">
+        <p class="eyebrow">The guild</p>
+        <h2>Only contracts</h2>
+        <p>VLU is a bounty-hunter community operating on the VLU Core3 galaxy. Track targets, build your reputation, group with other hunters, and make every cantina conversation a little quieter.</p>
+      </div>
+      <div class="feature-grid">
+        <article><span>01</span><h3>Track the mark</h3><p>Follow live bounty signals, last-known planets, payouts, and recent claims.</p></article>
+        <article><span>02</span><h3>Build a name</h3><p>Hunt across a classic Pre-CU sandbox with professions, crafting, Jedi, PvP, and player cities.</p></article>
+        <article><span>03</span><h3>Join the network</h3><p>Create your VLU account, download the Core3 client, and enter the galaxy for free.</p></article>
+      </div>
+    </section>
+
+    <section class="update-band" aria-label="Latest galaxy update">
+      <div>
+        <p class="eyebrow">Vlu update // 13 September 2026</p>
+        <h2>A Title Earned</h2>
+        <p>A new path to Knighthood has opened on Vlu. Personal trials and new PvE raid encounters lead the way &mdash; full Jedi Master training is now required to receive the title.</p>
+      </div>
+      <a class="button secondary" href="updates-2026-09-13.html">Read the update</a>
+    </section>
+
+    <section class="discord-section" aria-labelledby="discord-title">
+      <div class="discord-card">
+        <div class="discord-copy">
+          <p class="eyebrow">Guild communications</p>
+          <h2 id="discord-title">Join VLU on Discord</h2>
+          <p>Meet the hunters, follow server announcements, report issues, share contracts, and find a group before entering the galaxy.</p>
+          <div class="discord-actions"><a class="button discord-button" href="https://discord.gg/JknSN97MFR" target="_blank" rel="noopener"><i class="fa-brands fa-discord" aria-hidden="true"></i>Join VLU Bounty Hunters</a></div>
+        </div>
+        <div class="discord-widget"><iframe src="https://discord.com/widget?id=1534796799523553330&amp;theme=dark" title="VLU Bounty Hunters Discord members" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div>
+      </div>
     </section>
 
     <section class="cta-band">
