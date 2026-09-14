@@ -88,7 +88,7 @@
 
 // -- Cantina Cam (live game feed) ---------------------------
 (function(){
-  const STREAM_URL='https://harvester.swgtalon.online/cantina/index.m3u8';
+  const STREAM_URL='https://downloads.swgreturns.com:8443/cantina/index.m3u8';
   const video=document.getElementById('cam-video');
   const offline=document.getElementById('cam-offline');
   const tag=document.getElementById('cam-live-tag');
