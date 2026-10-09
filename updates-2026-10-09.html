@@ -1,10 +1,73 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Smuggler Overhaul and Squad Leader Combat — October 9, 2026</title>
-<meta name="description" content="Smuggler abilities, contraband missions, opt-in player bounties, slicing, rewards and recent Squad Leader combat changes.">
+<title>Ranger Expeditions, Smuggler Overhaul and Squad Leader Bases — October 9, 2026</title>
+<meta name="description" content="Ranger tracking, traps, abilities and expedition rewards; Squad Leader base crafting and orders; Smuggler missions and recent updates.">
 <link rel="canonical" href="https://vlusbountyhunters.github.io/updates-2026-10-09.html">
 <style>body{font:16px/1.6 Segoe UI,Arial,sans-serif;background:#07111f;color:#eef6ff;margin:24px}main{max-width:1100px;margin:auto}h1,h2{color:#ffd34e}a{color:#67dcff}li{margin:.5rem 0}section{margin:2rem 0}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;text-align:left;border-bottom:1px solid #385066}.table-wrap{overflow-x:auto}code{color:#b8f5ff}</style></head><body><main>
-<header><p>Patch notes · October 9, 2026</p><h1>Smuggler Overhaul and Squad Leader Combat</h1><p>Deployed gameplay changes, listed by feature. Close the game, run <strong>Scan / Update Game Files</strong> in the launcher, then log in again to refresh learned commands and profession defenses.</p></header>
+<header><p>Patch notes · October 9, 2026</p><h1>Ranger Expeditions, Smuggler Overhaul and Squad Leader Bases</h1><p>Deployed gameplay changes, listed by feature. Close the game, run <strong>Scan / Update Game Files</strong> in the launcher, then log in again to refresh learned commands and profession defenses.</p></header>
+<section><h2>Ranger: tracking waypoints</h2><ul>
+<li>Select an Area Track result to create an active waypoint at that target's position. Selecting another result replaces your previous tracking marker without replacing an unrelated personal waypoint with the same name.</li>
+<li>The marker records the position at selection; it does not continuously follow the target. Results expire after one minute. Targets must still be alive, outdoors, visible to tracking, on the same planet and within 2,048 metres.</li>
+<li>NPC and player tracking retain their existing training requirements. Master Rangers see creature/NPC levels, with level 300 and higher marked as high threats.</li>
+</ul></section>
+<section><h2>Scout and Ranger traps in combat</h2><ul>
+<li>Thrown traps now work against legally attackable players and NPCs as well as wildlife. Pets remain excluded; existing duel, faction and bounty attack permissions still apply.</li>
+<li>Player-thrown trap direct damage is multiplied by three. This does not triple control duration or increase NPC attackers' trap damage.</li>
+<li>Master Ranger has an 80% hit roll against eligible targets. Other characters retain the existing trapping-skill versus defense calculation. Existing states and control immunity can still prevent a state effect.</li>
+<li>PvP control effects last at most eight seconds and share a 20-second target immunity. Trap damage may still land during control immunity.</li>
+<li>Range, line of sight and attack permission are checked at throw and impact. Throwing a trap reveals Ranger camouflage, even if it misses. Player targets do not award trapping XP.</li>
+</ul></section>
+<section><h2>New Ranger abilities</h2><ul>
+<li><strong>Ranger Ambush — Movement IV:</strong> open combat from Ranger camouflage with a melee or ranged attack dealing 3× damage and +40 accuracy. Uses 1.5× attack delay and weapon Health/Action/Mind costs of 1×/2×/1.5×. Reveals camouflage; unavailable once already in combat. 45-second recharge.</li>
+<li><strong>Hunter's Focus — Master Ranger:</strong> +40 accuracy and +25 melee/ranged defense for 20 seconds. Costs 150 Action and 100 Mind. 90-second recharge.</li>
+<li><strong>Wilderness Recovery — Support IV:</strong> while out of combat inside an active Scout/Ranger camp, restore up to 20% of each HAM pool, capped at 10,000 per pool. Personal recovery only; Squad Leader fortifications do not qualify. Three-minute recharge.</li>
+<li><strong>Expedition Journal — Novice Ranger:</strong> opens expeditions, destination waypoints, progress, field-mark purchases and reputation rewards. Use <code>/expeditionJournal</code> to begin.</li>
+<li>All four commands have distinct monochrome icons and readable names, help and profession descriptions. Existing trained characters receive the appropriate commands on login without retraining.</li>
+</ul></section>
+<section><h2>Starting Ranger expeditions</h2><ol>
+<li>Train Novice Ranger, open <strong>Expedition Journal</strong> and choose an available route.</li>
+<li>Visit the three marked wilderness checkpoints in order. At each site, on foot and out of combat, choose <strong>Survey this checkpoint</strong> within 64 metres.</li>
+<li>After all three surveys, harvest the required qualifying wild creatures outdoors on that planet. Then return within 64 metres of the final checkpoint and choose <strong>Complete expedition</strong>.</li>
+</ol><div class="table-wrap"><table><thead><tr><th>Expedition</th><th>Reputation to unlock</th><th>Harvest requirement</th><th>Credits</th><th>Field marks / reputation</th></tr></thead><tbody>
+<tr><td>Dune Sea Field Survey — Tatooine</td><td>0</td><td>Three level-20+ specimens</td><td>750,000</td><td>15</td></tr>
+<tr><td>Endor Predator Expedition</td><td>50</td><td>Three level-40+ specimens</td><td>1,500,000</td><td>25</td></tr>
+<tr><td>Dathomir Apex Expedition</td><td>200</td><td>Two level-65+ specimens</td><td>2,500,000</td><td>40</td></tr>
+</tbody></table></div><ul>
+<li>One active expedition at a time, four attempts per character per UTC day, a one-hour deadline and a minimum three-minute journey. Completing, abandoning or expiring an expedition starts a ten-minute wait before another attempt.</li>
+<li>Field marks are spendable currency; earned reputation unlocks later routes and titles. These expeditions do not automatically expose you to PvP or player bounties.</li>
+<li>Successful harvests from level-50+ wild creatures also have a 20% chance to grant three field marks, capped at 20 harvest-earned marks per UTC day. Pets and repeat attempts to harvest the same corpse do not qualify.</li>
+</ul></section>
+<section><h2>Ranger components, trophies and permanent titles</h2><ul>
+<li><strong>Apex Predator Tendon — 30 field marks:</strong> a vibro-weapon component with 200–250 minimum-damage contribution, 250–325 maximum-damage contribution, 5–10 wound chance and 3–5 uses.</li>
+<li><strong>Concentrated Predator Bile — 30 field marks:</strong> 350–500 power, 800–1,200 charges and 30–45 uses. Big Tooth's signature bile retains its higher power range.</li>
+<li><strong>Pathfinder's Rancor Trophy:</strong> 50 field marks and 50 reputation required.</li>
+<li><strong>Master Tracker's Krayt Trophy:</strong> 100 field marks and 500 reputation required.</li>
+<li>Permanent selectable titles unlock at 50 reputation (<strong>Wilds Pathfinder</strong>), 200 (<strong>Apex Tracker</strong>) and 500 (<strong>Master of the Wilds</strong>). Earned titles remain available to equip or remove after relogging.</li>
+<li>Leave room in your inventory for reward delivery. Rejected purchases do not spend field marks.</li>
+</ul></section>
+<section><h2>Squad Leader: base crafting repaired</h2><ul>
+<li>The four base kits and Squad Supply Pack are now registered in the crafting list under the existing <strong>Scout/Ranger camp category</strong>. Use a generic crafting tool; these remain Squad Leader recipes, not Ranger unlocks.</li>
+<li>Existing eligible characters receive their learned recipes on login. Recipe materials, profession requirements and factory restrictions are unchanged.</li>
+</ul><div class="table-wrap"><table><thead><tr><th>Recipe</th><th>Squad Leader training</th><th>Construction</th><th>Duration</th><th>Module slots</th><th>Starting supplies</th></tr></thead><tbody>
+<tr><td>Squad Rally Camp Kit</td><td>Novice</td><td>30 seconds</td><td>30 minutes</td><td>1</td><td>20</td></tr>
+<tr><td>Squad Field Outpost Kit</td><td>Support II</td><td>45 seconds</td><td>40 minutes</td><td>2</td><td>40</td></tr>
+<tr><td>Squad Fortified Outpost Kit</td><td>Defense IV</td><td>60 seconds</td><td>50 minutes</td><td>3</td><td>60</td></tr>
+<tr><td>Squad Command FOB Kit</td><td>Master</td><td>90 seconds</td><td>60 minutes</td><td>4</td><td>100</td></tr>
+</tbody></table></div><p><strong>Squad Supply Pack</strong> is learned at Novice Squad Leader. Base kits are temporary field support, not permanent player-city structures.</p></section>
+<section><h2>Squad Leader: field bases and squad orders</h2><ul>
+<li>Available modules include Field Medical, Resupply and Repair Stations, Recon Sensor, Barricade Perimeter, Limited Sentry Turret and Command Uplink. Installation and services spend finite base supplies and use the tier's module slots.</li>
+<li>Repair restores at most 1,000 condition to an equipped, unbroken weapon. Recon reports visible hostile-contact counts. Command Uplink grants +10 accuracy and defense for 60 seconds. The five service modules share a 60-second recipient cooldown.</li>
+<li>The Limited Sentry Turret has 30 shots, no ammunition refill, a 100-metre range and a three-second firing cycle. Barricades, turrets and uplinks require a combat-capable Fortified Outpost or Command FOB.</li>
+<li>Neutral bases serve eligible non-overt owners/group members; combat-base services require a matching overt faction. Existing legal placement rules remain, including no player base construction on Hoth or Mandalore.</li>
+<li><strong>Focus Fire — Offense IV:</strong> +25 squad accuracy against one designated legal enemy for 20 seconds, within 64 metres. Costs 100 Action and 100 Mind; 60-second command and recipient cooldowns.</li>
+<li><strong>Hold This Position — Defense IV:</strong> +25 squad defense for 30 seconds while within 12 metres of the marked position. Leaving the area or group disables the benefit. Costs 100 Action and 100 Mind; 60-second command and recipient cooldowns.</li>
+<li><strong>Break Contact — Movement IV:</strong> clears immobilized and frozen movement states from nearby squad players, not damage-over-time effects or other harmful states. Costs 100 Action and 100 Mind; 90-second command and recipient cooldowns.</li>
+<li><strong>Emergency Resupply — Support IV:</strong> consumes one Squad Supply Pack from the leader's main inventory to restore up to 1,000 Action and 1,000 Mind to nearby squad players within 64 metres. 90-second command and recipient cooldowns; unavailable while trading.</li>
+<li>These squad orders require group leadership and eligible player recipients. Each has a distinct monochrome icon and readable command/profession help.</li>
+<li><strong>Form Up:</strong> clears dizzy and stunned states and grants +25 defense for 20 seconds to eligible squad players within 64 metres; this defense does not stack with Hold This Position. 60-second command and recipient cooldowns.</li>
+<li><strong>Retreat:</strong> 1.822× movement speed and acceleration for 30 seconds, with −25 attack accuracy. Unmounted recipients cannot combine it with conflicting Burst Run or Force Run effects.</li>
+<li><strong>Rally:</strong> +50 melee/ranged defense and +50 equipped-weapon accuracy for 300 seconds. <strong>Steady Aim:</strong> ranged aiming bonus of five plus the leader's steady-aim modifier for 300 seconds. Their player buffs do not impose an action-blocking state.</li>
+</ul></section>
 <section><h2>Starting Smuggler missions</h2><ol>
 <li>Train Novice Smuggler and use <code>/underworldNetwork</code>. Select <strong>Find contact</strong> for a waypoint on Tatooine, Corellia, Yavin IV or Naboo.</li>
 <li>Visit the contact and choose <strong>Contraband Courier</strong>. Accept the confirmation and pay the 100,000-credit bond.</li>
@@ -72,6 +135,13 @@
 <li><strong>Last Stand — Master Squad Leader:</strong> +50 melee, ranged, knockdown and stun defense for 20 seconds. Costs 150 Action and 150 Mind; 90-second cooldown.</li>
 <li>Added full-training totals of +60 melee and ranged defense, +30 dodge and +40 each dizzy, stun, knockdown and intimidate defense. Existing learned defenses refresh on login without stacking or replacing unrelated buffs.</li>
 <li>New abilities have monochrome icons and readable help. Focus Fire, Hold Position, Break Contact and Emergency Resupply also retain readable command names and descriptions.</li>
+</ul></section>
+<section><h2>Additional recent repairs: inventory, medical services and missions</h2><ul>
+<li><strong>Inventory display:</strong> the client inventory capacity now matches the deployed 1,000-item server limit, correcting the old 200-item client threshold. Banks, backpacks and genuine capacity restrictions are unchanged.</li>
+<li><strong>Dereth Medical Services:</strong> public terminals at the front walls of DERETH Crafting Hall and DERETH Medical Center offer separate 24-hour packages for 10,000 credits each. The doctor package gives +30,000 to the six physical attributes; the entertainer package gives +25,000 Mind, Focus and Willpower.</li>
+<li>Medical packages refresh their normal buff slots rather than stacking. Stronger existing selected buffs and an identical package refreshed within 60 seconds are rejected without charge. Unrelated buffs remain intact.</li>
+<li><strong>Janta missions:</strong> corrected outdoor encounter placement on uneven terrain and improved directional offer availability for all three Janta mission tiers. Terrain safety and encounter spacing remain enforced; enemy statistics, loot and payouts are unchanged.</li>
+<li><strong>Launcher:</strong> the released version 2026.10.8.2 fixes stalled automatic startup checks and skipped or misleading game-file checks. Play becomes available after the selected game folder passes verification; failed downloads preserve existing files and report the error.</li>
 </ul></section>
 <section><h2>Recent safety correction and verification</h2><ul>
 <li>Corrected over-100% percentage mitigation producing extreme damage or invalid costs, healing and durations, including the reported Force Choke case. Earned stats and NPC base combat values remain unchanged.</li>
