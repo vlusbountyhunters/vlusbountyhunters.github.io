@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smuggler Overhaul and Squad Leader Combat — October 9, 2026</title>
+<meta name="description" content="Smuggler abilities, contraband missions, opt-in player bounties, slicing, rewards and recent Squad Leader combat changes.">
+<link rel="canonical" href="https://vlusbountyhunters.github.io/updates-2026-10-09.html">
+<style>body{font:16px/1.6 Segoe UI,Arial,sans-serif;background:#07111f;color:#eef6ff;margin:24px}main{max-width:1100px;margin:auto}h1,h2{color:#ffd34e}a{color:#67dcff}li{margin:.5rem 0}section{margin:2rem 0}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;text-align:left;border-bottom:1px solid #385066}.table-wrap{overflow-x:auto}code{color:#b8f5ff}</style></head><body><main>
+<header><p>Patch notes · October 9, 2026</p><h1>Smuggler Overhaul and Squad Leader Combat</h1><p>Deployed gameplay changes, listed by feature. Close the game, run <strong>Scan / Update Game Files</strong> in the launcher, then log in again to refresh learned commands and profession defenses.</p></header>
+<section><h2>Starting Smuggler missions</h2><ol>
+<li>Train Novice Smuggler and use <code>/underworldNetwork</code>. Select <strong>Find contact</strong> for a waypoint on Tatooine, Corellia, Yavin IV or Naboo.</li>
+<li>Visit the contact and choose <strong>Contraband Courier</strong>. Accept the confirmation and pay the 100,000-credit bond.</li>
+<li>Travel to the interception waypoint, defeat both required enemy waves, then visit the destination contact and select <strong>Deliver cargo</strong>.</li>
+</ol><ul>
+<li>Contracts last 30 minutes and require at least three minutes between acceptance and delivery. There are four attempts per character per UTC day and a ten-minute cooldown after completion or failure.</li>
+<li>The 100,000-credit bond is returned only on success. Death, cancellation or expiry forfeits it. Cargo is recorded for the accepting courier and cannot be traded.</li>
+<li>Ordinary routes require the courier's own kills or controlled-pet kills. Crew Operation registers two to six nearby group members at acceptance; only the accepting courier receives the payout. An outsider delivering a killing blow fails the contract.</li>
+<li>Unfinished fights restart from the first wave after logout or a server restart; the original contract deadline continues. Missing enemies do not count as defeated.</li>
+</ul></section>
+<section><h2>Contracts and progression</h2><div class="table-wrap"><table><thead><tr><th>Contract</th><th>Required reputation</th><th>Success credits</th><th>Marks / reputation</th></tr></thead><tbody>
+<tr><td>Contraband Courier</td><td>0</td><td>1,000,000</td><td>10</td></tr>
+<tr><td>Restricted Weapons Run</td><td>100</td><td>2,000,000</td><td>20</td></tr>
+<tr><td>Kingpin's Sealed Shipment</td><td>400</td><td>4,000,000</td><td>35</td></tr>
+<tr><td>Contested Courier — Player Bounty</td><td>100</td><td>3,000,000</td><td>30</td></tr>
+<tr><td>Black Sun Shadow Route</td><td>100, plus membership</td><td>2,200,000</td><td>22</td></tr>
+<tr><td>Crew Operation: Cartel Blockade</td><td>400</td><td>6,000,000</td><td>50</td></tr>
+</tbody></table></div><ul>
+<li>Listed credits exclude the returned bond. Marks are spending currency; earned reputation unlocks routes and permanent selectable titles: Contraband Courier at 100, Shadow Runner at 400 and Underworld Kingpin at 1,000.</li>
+<li>Contracts add Heat. Higher Heat increases customs risk and adds opposition at 60 or higher. Heat falls by five every ten minutes and never grants PvP attack rights by itself.</li>
+<li>Black Sun membership provides an optional route; independent Smugglers retain the main progression, rewards and services.</li>
+</ul></section>
+<section><h2>Mission enemies</h2><ul>
+<li>Dedicated interceptors, inspectors and rivals are level 350 with Heavy armor, 80% resistance to all nine damage types, 1,200,000 HAM and 7,000–12,000 base damage.</li>
+<li>Commanders are level 400 with Heavy armor, the same resistances, 3,500,000 HAM and 14,000–24,000 base damage. Actual damage remains subject to combat defenses.</li>
+<li>Both waves are mandatory. Higher-tier, high-Heat, crew and bonus-dispatch routes increase opposition. Mission enemies do not provide ordinary XP or loot; completion pays the contract reward.</li>
+</ul></section>
+<section><h2>Smuggler player bounties</h2><ul>
+<li><strong>Contested Courier is explicitly opt-in PvP.</strong> Its acceptance screen warns that you additionally spend a nonrefundable 250,000 credits to fund a bounty on yourself.</li>
+<li>The bounty lasts 30 minutes from acceptance, including after delivery, cancellation, travel or logout. Simply training Smuggler or gaining Heat does not activate it.</li>
+<li>Bounty terminals identify the contract as <strong>Player Bounty: Contested Smuggler</strong> and explain its player target, reward, time limit and claim rules.</li>
+<li>The eligible hunter who delivers the killing blow, including through their controlled pet, receives the single 250,000-credit payout. Group membership does not multiply the reward. Same-account hunts are disallowed.</li>
+<li>Expired or claimed Smuggler contracts no longer grant tracking or attack rights. Existing Jedi and other player bounties remain separate.</li>
+</ul></section>
+<section><h2>New Smuggler abilities and defenses</h2><ul>
+<li><strong>Cheap Shot — Dirty Fighting I:</strong> pistol attack with 2.5× damage and +25 accuracy. A damaging hit reduces target accuracy by 35 for eight seconds, at most once per target every 30 seconds. 20-second recharge.</li>
+<li><strong>Sabotage Weapon — Dirty Fighting II:</strong> pistol attack with 2× damage and +20 accuracy. A damaging hit increases the target's attack delay by 30% for eight seconds, at most once per target every 30 seconds. Does not damage equipment. 30-second recharge.</li>
+<li><strong>Smoke and Mirrors — Dirty Fighting III:</strong> non-damaging pistol burst with a 90% base chance to blind legal enemies within 12 metres of the target for 12 seconds. Maximum target range is 24 metres; normal state defenses apply. 60-second recharge.</li>
+<li><strong>Loaded Dice — Dirty Fighting IV:</strong> +40 pistol accuracy and a 20% chance of 50% additional pistol damage for 15 seconds. Costs 150 Action and 100 Mind. 90-second recharge.</li>
+<li><strong>Slip the Net — Underworld IV:</strong> removes immobilization and freezing and adds 50% movement speed for eight seconds. Other harmful states, damage-over-time effects and PvP flags remain. Costs 150 Action and 100 Mind. 120-second recharge.</li>
+<li><strong>Nothing Personal — Master Smuggler:</strong> pistol finisher against targets at or below 35% Health. 6× damage, reduced to 3× against level-300-or-higher NPCs, with +30 accuracy. 45-second recharge.</li>
+<li><strong>Underworld Network — Novice Smuggler:</strong> opens contacts, contracts, navigation, Heat, reputation, rewards and services.</li>
+<li>All seven commands have distinct monochrome icons and readable names and descriptions. Training requirements, costs, attack delays and effects are documented in the profession skill descriptions.</li>
+<li>Across full training, added defenses total +65 ranged defense, +40 dodge and +40 each to blind, dizzy, stun and knockdown defense. Existing trained Smugglers receive the appropriate changes on login. Existing Spice benefits are unchanged.</li>
+</ul></section>
+<section><h2>Slicing and underworld services</h2><ul>
+<li>Equipment slicing offers weapon damage, attack speed or HAM-cost efficiency, and armor protection or encumbrance choices. Existing tool, success, failure and single-slice restrictions remain.</li>
+<li>Shipping terminals offer one slice per contract, consuming an Encrypted Slicing Chip: reroute with Slicing I, bypass customs with Slicing III, or add a bonus dispatch with Slicing IV.</li>
+<li>Bonus dispatch adds opposition, including another final-wave commander, and awards 25% additional contract credits plus five marks and reputation. Rerouting never resets the deadline or removes bounty exposure.</li>
+<li>A 200,000-credit customs bribe or an Inspection Pass removes the extra inspector, not the mandatory mission waves.</li>
+<li>At contacts, laying low costs 100,000 credits and removes 20 Heat when you have no active shipment. Safehouse travel to the next contact costs 25,000 credits and is unavailable with cargo, combat, bounty exposure or other disqualifying PvP/visibility conditions.</li>
+<li>A Forged Transponder removes 30 Heat outside combat. An Escape Toolkit provides 25% movement speed for five seconds, with a 180-second recharge; it does not remove PvP flags.</li>
+</ul></section>
+<section><h2>Underworld rewards</h2><ul>
+<li><strong>Quiet Negotiator:</strong> 60 marks; Heavy armor-piercing pistol, 12,500–22,500 base damage and 1.5 attack speed.</li>
+<li><strong>Last Word Holdout:</strong> 90 marks; Heavy armor-piercing pistol, 14,000–26,000 base damage and 1.7 attack speed.</li>
+<li><strong>Shadow Runner's Vest:</strong> 50 marks; +15 pistol accuracy, ranged defense and dodge.</li>
+<li><strong>Contraband Precision Vibro Motor</strong> and <strong>Contraband Blaster Power Handler:</strong> 35 marks each; advanced components with their own property ranges, not replacements for exclusive world-boss drops.</li>
+<li>Forged Transponder and Inspection Pass: ten marks each. Escape Toolkit: 15. Precision Slicing Clamp: five. Encrypted Slicing Chip: eight.</li>
+<li>Underworld Executive Chair: 15 marks. Underworld Executive Table: 20 marks.</li>
+</ul></section>
+<section><h2>Recent Squad Leader combat update</h2><ul>
+<li><strong>Suppressive Fire — Offense II:</strong> 2.5× ranged damage, +15 accuracy and a 75% base chance to stun for eight seconds; 12-second cooldown.</li>
+<li><strong>Breach Shot — Offense IV:</strong> 4× ranged damage, +25 accuracy and an 80% base chance to dizzy for 12 seconds; 20-second cooldown. Normal state defenses apply to both attacks.</li>
+<li><strong>Last Stand — Master Squad Leader:</strong> +50 melee, ranged, knockdown and stun defense for 20 seconds. Costs 150 Action and 150 Mind; 90-second cooldown.</li>
+<li>Added full-training totals of +60 melee and ranged defense, +30 dodge and +40 each dizzy, stun, knockdown and intimidate defense. Existing learned defenses refresh on login without stacking or replacing unrelated buffs.</li>
+<li>New abilities have monochrome icons and readable help. Focus Fire, Hold Position, Break Contact and Emergency Resupply also retain readable command names and descriptions.</li>
+</ul></section>
+<section><h2>Recent safety correction and verification</h2><ul>
+<li>Corrected over-100% percentage mitigation producing extreme damage or invalid costs, healing and durations, including the reported Force Choke case. Earned stats and NPC base combat values remain unchanged.</li>
+<li>Server startup, paired update integrity and automated regressions have been checked. Real multiplayer balance and every player's icon/rendering experience still require gameplay confirmation; please report the exact ability, contract or reward if something fails.</li>
+</ul><p><a href="updates-2026-10-04.html">October 4 patch notes</a> · <a href="updates.html">All updates</a> · <a href="download.html">Launcher downloads</a></p></section>
+</main></body></html>
