@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commando Heavy Assault and Recent Combat Updates — October 12, 2026</title>
+<meta name="description" content="Deployed Commando abilities, Orbital Strike, protected building demolition, Master bonuses, and recent Ranger, city storage and melee component changes.">
+<link rel="canonical" href="https://vlusbountyhunters.github.io/updates-2026-10-12.html">
+<style>body{font:16px/1.6 Segoe UI,Arial,sans-serif;background:#07111f;color:#eef6ff;margin:24px}main{max-width:1100px;margin:auto}h1,h2{color:#ffd34e}a{color:#67dcff}li{margin:.5rem 0}section{margin:2rem 0}table{border-collapse:collapse;width:100%}th,td{padding:.65rem;text-align:left;border-bottom:1px solid #385066}.table-wrap{overflow-x:auto}code{color:#b8f5ff}</style></head><body><main>
+<header id="commando-20261012"><p>Patch notes · October 12, 2026</p><h1>Commando Heavy Assault and Recent Combat Updates</h1><p>Deployed changes, listed by feature. Close the game, run <strong>Scan / Update Game Files</strong> in the launcher, then log in again. Existing trained Commandos receive their new abilities and permanent bonuses without retraining.</p></header>
+<section><h2>Master Commando: Orbital Strike</h2><ul>
+<li>Use <code>/orbitalStrike</code> with a selected legal enemy, or <code>/orbitalStrike x y</code> to designate an outdoor point within 80 metres. Nearby players receive a five-second warning before impact.</li>
+<li>The 25-metre blast has base damage of 75,000–100,000 against ordinary PvE enemies, or 10,000–15,000 against players, pets and vehicles. Damage falls to 25% at the edge; armor and normal combat rules still apply.</li>
+<li>Three fire pulses follow at five-second intervals. Each has base damage of 2,500 PvE or 500 against players, pets and vehicles, with the same distance falloff. They attempt a resistible 15-second fire damage-over-time effect with strength 1,000 PvE or 250 against players, pets and vehicles, and potency 100.</li>
+<li>Impact uses a five-burst explosion pattern with explosion audio. Equipped weapon damage does not determine strike damage. Each pulse affects at most 64 legal outdoor creature targets; Orbital Strike cannot damage buildings.</li>
+<li>Costs 1,000 Action and 500 Mind. Five-minute recharge, including interrupted strikes. Remain alive, online, outdoors, unmounted, trained and within 80 metres of the designated point; target legality and line of sight are checked for every pulse.</li>
+</ul></section>
+<section><h2>Heavy-weapon attacks</h2><p>These attacks support heavy and special-heavy weapons, including <strong>The Annihilator</strong>. Each gives +25 accuracy. Normal target, range, line-of-sight and combat restrictions apply; attacks cannot damage buildings or other non-creature structures.</p>
+<div class="table-wrap"><table><thead><tr><th>Ability and training</th><th>Weapon damage / attack delay</th><th>Target-centred splash</th><th>Weapon HAM multipliers</th><th>Recharge</th></tr></thead><tbody>
+<tr><td>Saturation Fire — Heavy Weapon Accuracy III</td><td>3× / 2×</td><td>12 metres</td><td>1× Health / 2× Action / 1× Mind</td><td>25 seconds</td></tr>
+<tr><td>Thermobaric Charge — Support IV</td><td>4× / 2.5×</td><td>10 metres</td><td>1.5× Health / 2× Action / 1.5× Mind</td><td>60 seconds</td></tr>
+<tr><td>Concussion Barrage — Heavy Weapon Accuracy IV</td><td>2× / 2×</td><td>10 metres</td><td>1× Health / 2× Action / 1× Mind</td><td>45 seconds</td></tr>
+<tr><td>Siegebreaker — Heavy Weapon Speed IV</td><td>4× / 1.5×</td><td>Single target</td><td>1× Health / 2× Action / 1.5× Mind</td><td>30 seconds</td></tr>
+</tbody></table></div><ul>
+<li><strong>Thermobaric Charge:</strong> attempts a 20-second Health fire DOT with strength 1,500 and potency 100. Normal resistance checks apply.</li>
+<li><strong>Concussion Barrage:</strong> attempts dizziness and knockdown with 15-second effect settings. Normal state defenses and knockdown recovery rules remain in effect; neither effect is guaranteed.</li>
+<li><strong>Siegebreaker:</strong> a damaging hit reduces ordinary armor resistance by up to 15 percentage points for 12 seconds, with a shared 30-second target immunity. It cannot strip 100% immunity or affect personal shield generators.</li>
+<li>Listed recharges apply per attempt. The Annihilator's appearance, firing audio, stance and existing Commando Novice flamethrower certification are unchanged.</li>
+</ul></section>
+<section><h2>Commando defensive abilities</h2><ul>
+<li><strong>Entrenched Gunner — Support III:</strong> +50 knockdown and intimidation defense for 20 seconds. While stationary, take 25% less direct damage. Moving suspends the damage reduction without preventing movement. Costs 200 Action and 150 Mind; 60-second recharge.</li>
+<li><strong>Blast Shield — Support IV:</strong> for 12 seconds, take 50% less direct blast damage and 20% less other direct damage. Costs 200 Action and 150 Mind; 90-second recharge.</li>
+<li>These reductions do not reduce DOT ticks and do not add together; the stronger applicable protection is used.</li>
+</ul></section>
+<section><h2>Master Commando passive bonuses</h2><ul>
+<li><strong>Heavy Assault Training:</strong> adds +50 melee and ranged defense; +30 knockdown, posture-change-down, stun, dizzy and intimidation defense; and +30 accuracy and +10 speed for rocket launchers, particle beams, acid beams, lightning beams, flamethrowers, acid rifles and thrown weapons.</li>
+<li>These are additions to existing profession bonuses, not replacement totals. Normal combat caps remain in effect.</li>
+<li><strong>Demolition Expertise:</strong> heavy, special-heavy and thrown weapon attacks cost 25% less weapon HAM. Successful grenade throws have a 25% chance not to consume a charge. This does not reduce Force costs or fixed ability activation costs.</li>
+<li>All eight new abilities have distinct monochrome icons and readable command names and help. Profession descriptions list the abilities and passive benefits. Existing learned bonuses refresh on login without stacking or removing unrelated temporary buffs.</li>
+<li>Corrected a malformed Heavy Weapon Speed I modifier entry so its rocket-launcher speed and particle-beam accuracy bonuses are read separately.</li>
+</ul></section>
+<section><h2>Master Commando: Building Demolition</h2><ul>
+<li>Use <code>/demolishBuilding</code> with an eligible empty private enemy dwelling selected. You must be outdoors, within 32 metres and in line of sight. You and its online owner must belong to opposing GCW factions, both be Special Forces, and be legally hostile.</li>
+<li>A 30-second warning precedes demolition. Costs 1,000 Action and 500 Mind; ten-minute recharge, including cancellations. Remain alive, online, trained, unmounted and nearby.</li>
+<li><strong>Stored belongings and occupants are protected.</strong> Items, even empty player containers, vendors, pets, players and guards prevent demolition. Neutral, friendly, public, civic, static and offline-owned private dwellings are protected. Incompletely loaded or busy buildings are refused.</li>
+<li>Eligible destructible enemy player faction bases use their normal vulnerability, security, overload and countdown rules. These objectives cannot be skipped, and an existing destruction countdown cannot be taken over.</li>
+<li>Eligibility and contents are checked again immediately before destruction, including at faction-base detonation. No stored belongings are salvaged or destroyed by this ability.</li>
+</ul></section>
+<section><h2>October 11: Ranger combat bonuses and camouflage</h2><ul>
+<li>Full Ranger training adds +60 melee/ranged accuracy, +15 melee/ranged speed, +60 melee/ranged defense, +30 dodge/block/counterattack, and +40 each blind, dizzy, stun, knockdown and intimidation defense.</li>
+<li>The existing +10 Master melee/ranged defense is retained, giving +70 total from Ranger training. Offensive bonuses are generalized across melee or ranged weapon families; normal combat caps still apply.</li>
+<li>Master-applied camouflage now has +200% concealment strength: three times its previous strength. Duration, cooldown and normal reveal conditions are unchanged. Log in again to refresh training, then reapply camouflage.</li>
+</ul></section>
+<section><h2>October 10: City storage and melee components</h2><ul>
+<li>Existing and new player-city civic/commercial structures and garages have 1,500 storage capacity. Guild halls retain 2,500. Existing contents and building-placement restrictions are unchanged.</li>
+<li>All 37 covered damage-bearing melee loot component variants now use new damage-contribution rolls of 44,000–62,400 while preserving their original minimum/maximum damage ratios. These are component contributions, not a guaranteed finished weapon damage range.</li>
+<li>Existing acquired component rolls, non-damage properties, stack sizes, loot odds, crafting and slicing are unchanged. The signature Meatlump motor and speed-only fine-tuned motor retain their separate rules.</li>
+<li>Shared Geonosian yellow cubes and solidifying agent also affect ranged recipes that use those same ingredients.</li>
+</ul></section>
+<section><h2>Update instructions and verification</h2><p>Close the game, run <strong>Scan / Update Game Files</strong>, then log in again. Server startup, update integrity and automated checks passed. Actual combat balance, multiplayer interactions and in-game visual acceptance still need player feedback; please report the exact ability and what happened. No player building was destroyed for release testing.</p><p><a href="updates-2026-10-09.html">October 9 profession notes</a> · <a href="updates.html">All updates</a> · <a href="download.html">Launcher downloads</a></p></section>
+</main></body></html>
+
