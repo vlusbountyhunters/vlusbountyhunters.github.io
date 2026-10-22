@@ -14,8 +14,8 @@
   const mostWantedList=document.getElementById('most-wanted-list');
   const hallOfFameList=document.getElementById('hall-of-fame-list');
   if(!activityList&&!hunterList&&!mostWantedList&&!hallOfFameList) return;
-  const feedUrl='https://register.swgtalon.online/activity.php';
-  const statusUrl='https://register.swgtalon.online/status.precu.php';
+  const feedUrl='https://shadowofmandalore.com/activity.php';
+  const statusUrl='https://shadowofmandalore.com/status.precu.php';
   const resetBaseline=new Set([
     'bounty_kill|Xix Lightning was claimed on Dantooine|Unknown hunter claimed 612,000 credits near Dantooine outpost signal',
     'bounty_kill|Kiingpool was claimed on Corellia|Overt claimed 612,000 credits near Corellia starport trace',
@@ -88,7 +88,7 @@
 
 // -- Cantina Cam (live game feed) ---------------------------
 (function(){
-  const STREAM_URL='https://downloads.swgreturns.com:8443/cantina/index.m3u8';
+  const STREAM_URL='https://shadowofmandalore.com/cantina/index.m3u8';
   const video=document.getElementById('cam-video');
   const offline=document.getElementById('cam-offline');
   const tag=document.getElementById('cam-live-tag');
