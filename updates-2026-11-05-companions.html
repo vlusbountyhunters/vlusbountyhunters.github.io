@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vlu Creature Handler Overhaul</title><meta name="description" content="Companion training, Alpha Bond, Pack Tactics, new commands, contracts and earned rewards."><link rel="stylesheet" href="styles.css"></head><body><main style="max-width:1000px;margin:2rem auto;padding:1rem">
+<p>Patch notes · November 5, 2026</p>
+<article id="companion-overhaul">
+<h1>Creature Handler Overhaul</h1>
+<p>Close the game and run Scan/Update in the launcher before reconnecting. Existing trained characters receive their updated profession abilities and modifiers on login.</p>
+<h2>Commands and profession display</h2>
+<ul>
+<li>Added eight named commands with distinct monochrome icons and profession-sheet descriptions: Protect Me, Sic 'Em, Rally Beast, Break Free, Primal Fury, Emergency Recall, Alpha Bond and Pack Tactics.</li>
+<li>Protect Me, Sic 'Em and Rally Beast are alternate names for Guardian's Bond, Savage Pursuit and Primal Rally. Each shares the original trained technique requirement and cooldown; they do not provide additional casts.</li>
+<li>Protect Me: a selected Guardian intercepts 25% of direct Health damage for 12 seconds, capped at 2,500 per hit and 10,000 total. The transfer cannot kill the pet. Recharge: 90 seconds.</li>
+<li>Sic 'Em: the selected pet gains 50% movement speed and +10 accuracy for eight seconds, plus 3 accuracy per Role Mastery rank. A Stalker's next successful hit also attempts a short snare, camouflage exposure and combat delay. Recharge: 45 seconds.</li>
+<li>Rally Beast: restores 20% of pet HAM, or 25% during Apex Instinct, plus 1% per bond level beyond one and 2% per Recovery rank. Recovery is capped at 30,000 per pool. Removes one root, snare, dizzy, stunned or blinded state. Support companions also cleanse the handler, nearby owned pets and eligible group members within 16 metres. Recharge and shared group-cleanse cooldown: 90 seconds.</li>
+<li>Break Free: removes root and snare from the selected creature companion. Recharge: 90 seconds; learned at Creature Training IV.</li>
+<li>Primal Fury: grants the selected pet 20% more direct damage for 15 seconds, at the cost of taking 15% more direct damage. Recharge: 90 seconds; requires Master Creature Handler.</li>
+<li>Emergency Recall: directs the selected pet to follow through normal pathfinding and attempt peace. It does not teleport, bypass walls, remove roots or force opponents out of combat. Cannot recall a creature carrying a rider. Recharge: 30 seconds; learned at Novice.</li>
+<li>Companion abilities require a living owned creature within 48 metres and line of sight. Normal legal attack and assistance restrictions remain. Protect Me, Sic 'Em, Rally Beast, Break Free and Primal Fury cost 150 Action and 100 Mind before Command Efficiency. Recall and doctrine selection have no HAM cost.</li>
+</ul>
+<h2>Master doctrines</h2>
+<ul>
+<li>Alpha Bond designates one companion. While it is the only called creature and remains alive and in command range, it gains +10 accuracy and 10% direct damage; its handler takes 5% less direct damage.</li>
+<li>Pack Tactics requires two or three called creatures, each control level 35 or lower. Nearby active companions gain +5 accuracy and a 10% damage bonus divided by the total called creature count.</li>
+<li>The doctrines are mutually exclusive and require Master Creature Handler. Change them outside combat, with a shared 60-second switch cooldown. Existing total control and pet-count limits are unchanged.</li>
+</ul>
+<h2>Companion training and roles</h2>
+<ul>
+<li>The Beast Journal now offers six retrainable specialties. Companions share one training point initially, two at 500 bond and three at 2,500 bond.</li>
+<li>Accuracy grants +5 per rank. Attack Speed shortens attack time by 3% per rank while retaining the normal attack-speed floor. Control Resistance grants +6 state defense per rank.</li>
+<li>Recovery increases natural HAM regeneration by 10% per rank while both partners are out of combat, and adds two percentage points per rank to Rally recovery.</li>
+<li>Role Mastery adds two percentage points of Guardian damage reduction, 2% Ravager damage, +3 pursuit accuracy, +50 Venomous poison power or one percentage point of Support owner recovery per rank. Existing recovery caps remain.</li>
+<li>Command Efficiency reduces technique HAM costs by 10% per rank. Training allocation and reset require both partners out of combat and share a 60-second cooldown.</li>
+<li>Ravager hits now also apply armor rend for 12 seconds: one shared target stack every five seconds, maximum three. Each stack reduces nonimmune armor resistance by 3% of its value in PvE or 2% in PvP. Immunities and vulnerabilities remain unchanged.</li>
+<li>Bond labels now progress through Companion, Trusted Companion, Bonded Companion, Veteran Companion and Legendary Companion. Existing bond points and thresholds remain intact.</li>
+<li>Master Creature Handler gains an additional +20 melee accuracy, +20 ranged accuracy, +25 melee defense, +25 ranged defense, +15 block, +10 counterattack and +20 knockdown defense. These are generalized bonuses, additive to existing profession training.</li>
+</ul>
+<h2>Companion contracts</h2>
+<p>Masters can open Companion Contracts through the Beast Journal. Bring the same selected companion throughout; role retraining is allowed outside combat. Contracts are available on Tatooine, Naboo, Endor, Dathomir, Chandrila, Mandalore and Hoth.</p>
+<ul>
+<li>Escaped Experiment: survey its trail, track with a Stalker, contain the baited creature with a Guardian and calm it with a Support companion. Reward: six expedition tokens.</li>
+<li>Poacher Rescue: defeat four level-350 poachers, stabilize a captive with a Support companion and escort the rescued creature to extraction. Poachers have 600,000 HAM, Heavy armor, 75% resistances except 35% heat, and 5,000–8,500 base damage. Reward: eight tokens.</li>
+<li>Dangerous Pack: follow the territory marker, defeat a three-creature pack, then defeat four reinforcements. Reward: eight tokens.</li>
+<li>Field Mastery: complete Guardian, Stalker and Support stages while managing field exposure. Wrong-role exposure drains 4% of current Health every ten seconds near the objective, but cannot kill you. Reward: six tokens.</li>
+<li>Follow the generated waypoint and use the marked objective. Contracts have a 30-minute deadline and route cooldown; only one adventure may be active at a time. Wrong roles, missing companions or combat interrupt objective interactions.</li>
+<li>Each contract awards a permanent collection entry. Complete all four, then visit an Expedition Bureau or log in again to unlock Companion Warden, a cosmetic title that remains selectable in the character sheet.</li>
+</ul>
+<h2>Earned rewards and existing pets</h2>
+<ul>
+<li>Field Companion Training Manual: six tokens and the Field Mastery collection. Single use; grants 25 bond points, subject to the existing daily cap and shared five-minute treatment cooldown.</li>
+<li>Master Handler Field Kit: twelve tokens and the Poacher Rescue collection. Reusable inventory equipment for opening companion contracts outdoors with a selected pet.</li>
+<li>Companion Sanctuary Display: twenty tokens and all four companion collections. A permanent decoration using the existing display-stand appearance.</li>
+<li>Claim these rewards at an Expedition Bureau. A full inventory retains a pending reward; interrupted contracts can be recovered there. Losing a pet does not prevent abandoning a contract at its objective.</li>
+<li>Existing pet names, base statistics, learned commands, bond points, roles and techniques are preserved. Training resets only reallocate specialty points.</li>
+<li>The four existing rare-companion hunts and three Master Bio-Engineer treatment recipes remain available. Normal taming, calling, control limits and PvP rules remain in force.</li>
+</ul>
+</article>
+<p><a href="updates-2026-11-05.html">Underworld Operations notes</a> · <a href="updates.html">All updates</a></p>
+</main></body></html>
